@@ -6,7 +6,7 @@
     "url": "https://www.github.com/kingrayhan"
   },
   "repository": "kingRayhan/react-video-player",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
