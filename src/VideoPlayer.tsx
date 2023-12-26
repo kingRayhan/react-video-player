@@ -14,7 +14,6 @@ import '@videojs/themes/dist/forest/index.css';
 import '@videojs/themes/dist/sea/index.css';
 import videojs, { ReadyCallback } from 'video.js';
 import './VideoPlayer.css';
-import clsx from 'clsx';
 
 export interface VideoPlayerProps {
   theme?: 'city' | 'fantasy' | 'forest' | 'sea';
@@ -84,7 +83,7 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
     <div className="gl-video-player__wrapper">
       <video
         ref={videoRef}
-        className={clsx(`video-js gl-video-player__video vjs-theme-${theme}`)}
+        className={`video-js gl-video-player__video vjs-theme-${theme}`}
         controls
         autoPlay={autoPlay}
         preload="auto"

@@ -1,7 +1,11 @@
 {
   "name": "@graphland/react-video-player",
-  "author": "KingRayhan",
-  "version": "0.1.0",
+  "author": {
+    "email": "rayhan.dev.bd@gmail.com",
+    "name": "kingrayhan",
+    "url": "https://rayhan.dev"
+  },
+  "version": "0.1.1",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -77,7 +81,6 @@
   },
   "dependencies": {
     "@videojs/themes": "^1.0.1",
-    "clsx": "^2.0.0",
     "video.js": "^8.6.1"
   }
 }
