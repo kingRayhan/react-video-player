@@ -1,6 +1,6 @@
 {
   "name": "@graphland/react-video-player",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "A customizable React component serving as a wrapper for the popular Video.js library. This component provides a sleek and responsive video player with theme options.",
   "main": "dist/index.js",
   "scripts": {
@@ -8,7 +8,7 @@
     "storybook:build": "storybook build",
     "storybook:serve": "cd storybook-static && npx http-server",
     "build": "tsup src/index.ts --dts",
-    "publish": "npm publish --scope=graphland --access=public"
+    "release": "npm publish --scope=graphland --access=public"
   },
   "keywords": [],
   "author": {
