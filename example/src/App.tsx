@@ -11,9 +11,7 @@ const App = () => {
   ];
 
   const videoProps: VideoPlayerProps = {
-    theme: "city", // 'city', 'fantasy', 'forest', 'sea'
-    height: 720,
-    width: 1280,
+    theme: "forest", // 'city', 'fantasy', 'forest', 'sea'
     autoPlay: false,
     loop: false,
     sources: videoSources,
