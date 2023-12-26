@@ -7,7 +7,8 @@
     "storybook:dev": "storybook dev -p 6006",
     "storybook:build": "storybook build",
     "storybook:serve": "cd storybook-static && npx http-server",
-    "build": "tsup src/index.ts --dts"
+    "build": "tsup src/index.ts --dts",
+    "publish": "npm publish --scope=graphland --access=public"
   },
   "keywords": [],
   "author": {
@@ -15,7 +16,10 @@
     "email": "rayhan.dev.bd@gmail.com",
     "url": "https://www.github.com/kingrayhan"
   },
-  "repository": "kingRayhan/react-video-player",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kingRayhan/react-video-player.git"
+  },
   "license": "ISC",
   "peerDependencies": {
     "react": ">=16.0.0",
