@@ -5,6 +5,7 @@ import VideoPlayer, { VideoPlayerProps } from '../src/VideoPlayer';
 const meta: Meta = {
   title: 'VideoPlayer',
   component: VideoPlayer,
+  tags: ['autodocs'],
 };
 
 export default meta;

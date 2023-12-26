@@ -19,10 +19,10 @@
   },
   "scripts": {
     "build": "tsdx build",
-    "publish": "npm publish --access public",
+    "publish": "npm publish --scope=graphland --access=public",
     "release": "semantic-release",
-    "dev:storybook": "start-storybook",
-    "build:storybook": "build-storybook"
+    "dev:storybook": "storybook dev",
+    "build:storybook": "storybook build"
   },
   "peerDependencies": {
     "react": ">=16"
@@ -35,12 +35,13 @@
   },
   "module": "dist/videojs.esm.js",
   "devDependencies": {
-    "@storybook/react": "^6.3.6",
+    "@storybook/react": "^7.6.6",
+    "@storybook/react-webpack5": "^7.6.6",
     "@types/react": "^17.0.16",
     "@types/react-dom": "^17.0.9",
-    "classnames": "^2.3.1",
-    "tsdx": "^0.13.3",
-    "semantic-release": "^19.0.2"
+    "semantic-release": "^19.0.2",
+    "storybook": "^7.6.6",
+    "tsdx": "^0.13.3"
   },
   "dependencies": {
     "@videojs/themes": "^1.0.1",
