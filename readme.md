@@ -1,8 +1,5 @@
-import { Meta } from "@storybook/blocks";
-
-<Meta title="Get Started" />
-
 ### @graphland/react-video-player
+
 A customizable React component serving as a wrapper for the popular Video.js library. This component provides a sleek and responsive video player with theme options.
 
 ### Installation
