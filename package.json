@@ -1,50 +1,45 @@
 {
   "name": "@graphland/react-video-player",
+  "version": "0.1.6",
+  "description": "A customizable React component serving as a wrapper for the popular Video.js library. This component provides a sleek and responsive video player with theme options.",
+  "main": "dist/index.js",
+  "scripts": {
+    "storybook:dev": "storybook dev -p 6006",
+    "storybook:build": "storybook build",
+    "storybook:serve": "cd storybook-static && npx http-server",
+    "build": "tsup src/index.ts --dts"
+  },
+  "keywords": [],
   "author": {
     "name": "King Rayhan",
     "email": "rayhan.dev.bd@gmail.com",
     "url": "https://www.github.com/kingrayhan"
   },
   "repository": "kingRayhan/react-video-player",
-  "version": "0.1.5",
-  "license": "MIT",
-  "main": "dist/index.js",
-  "typings": "dist/index.d.ts",
-  "files": [
-    "dist",
-    "src"
-  ],
-  "engines": {
-    "node": ">=10"
-  },
-  "scripts": {
-    "build": "tsdx build",
-    "publish": "npm publish --scope=graphland --access=public",
-    "release": "semantic-release",
-    "dev:storybook": "storybook dev",
-    "build:storybook": "storybook build"
-  },
+  "license": "ISC",
   "peerDependencies": {
-    "react": ">=16"
+    "react": ">=16.0.0",
+    "react-dom": ">=16.0.0"
   },
-  "prettier": {
-    "printWidth": 80,
-    "semi": true,
-    "singleQuote": true,
-    "trailingComma": "es5"
-  },
-  "module": "dist/videojs.esm.js",
   "devDependencies": {
+    "@storybook/addon-essentials": "^7.6.6",
+    "@storybook/addon-interactions": "^7.6.6",
+    "@storybook/addon-links": "^7.6.6",
+    "@storybook/addon-onboarding": "^1.0.10",
+    "@storybook/blocks": "^7.6.6",
     "@storybook/react": "^7.6.6",
     "@storybook/react-webpack5": "^7.6.6",
-    "@types/react": "^17.0.16",
-    "@types/react-dom": "^17.0.9",
-    "semantic-release": "^19.0.2",
+    "@storybook/test": "^7.6.6",
+    "@types/react": "^18.2.45",
+    "@types/react-dom": "^18.2.18",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "storybook": "^7.6.6",
-    "tsdx": "^0.13.3"
+    "typescript": "^5.3.3"
   },
   "dependencies": {
     "@videojs/themes": "^1.0.1",
+    "tsup": "^8.0.1",
     "video.js": "^8.6.1"
   }
 }

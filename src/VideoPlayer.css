@@ -1,4 +1,4 @@
-.gl-video-player__video {
+/* .gl-video-player__video {
   position: absolute;
   top: 0;
   left: 0;
@@ -8,6 +8,6 @@
 
 .gl-video-player__wrapper {
   position: relative;
-  padding-bottom: 56.25%; /* Aspect ratio for a 16:9 video */
+  padding-bottom: 56.25%;
   overflow: hidden;
-}
+} */

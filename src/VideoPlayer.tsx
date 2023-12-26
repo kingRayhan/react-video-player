@@ -1,22 +1,22 @@
-import React from 'react';
-import 'video.js/dist/video-js.css';
+import React from "react";
+import "video.js/dist/video-js.css";
 
 // City
-import '@videojs/themes/dist/city/index.css';
+import "@videojs/themes/dist/city/index.css";
 
 // Fantasy
-import '@videojs/themes/dist/fantasy/index.css';
+import "@videojs/themes/dist/fantasy/index.css";
 
 // Forest
-import '@videojs/themes/dist/forest/index.css';
+import "@videojs/themes/dist/forest/index.css";
 
 // Sea
-import '@videojs/themes/dist/sea/index.css';
-import videojs, { ReadyCallback } from 'video.js';
-import './VideoPlayer.css';
+import "@videojs/themes/dist/sea/index.css";
+import videojs, { ReadyCallback } from "video.js";
+import "./VideoPlayer.css";
 
 export interface VideoPlayerProps {
-  theme?: 'city' | 'fantasy' | 'forest' | 'sea';
+  theme?: "city" | "fantasy" | "forest" | "sea";
   height?: number;
   width?: number;
   autoPlay?: boolean;
@@ -46,7 +46,7 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
   sources,
   autoPlay = false,
   loop = false,
-  theme = 'city',
+  theme = "city",
   poster,
   // videojs specific props
   controlBar = {
@@ -73,37 +73,39 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
           preferFullWindow: true,
         },
         function onPlayerReady(ready?: ReadyCallback | undefined) {
-          videojs.log('Your player is ready!');
+          videojs.log("Your player is ready!");
           if (onReady) onReady(ready);
         }
       );
   }, [videoRef]);
 
   return (
-    <div className="gl-video-player__wrapper">
-      <video
-        ref={videoRef}
-        className={`video-js gl-video-player__video vjs-theme-${theme}`}
-        controls
-        autoPlay={autoPlay}
-        preload="auto"
-        width={width}
-        height={height}
-        loop={loop}
-        poster={poster}
-      >
-        {sources?.map(({ src, type }) => (
-          <source key={src} src={src} type={type} />
-        ))}
+    <div>
+      <div className="gl-video-player__wrapper">
+        <video
+          ref={videoRef}
+          className={`video-js vjs-theme-${theme} gl-video-player__video`}
+          controls
+          autoPlay={autoPlay}
+          preload="auto"
+          width={width}
+          height={height}
+          loop={loop}
+          poster={poster}
+        >
+          {sources?.map(({ src, type }) => (
+            <source key={src} src={src} type={type} />
+          ))}
 
-        <p className="vjs-no-js">
-          To view this video please enable JavaScript, and consider upgrading to
-          a web browser that
-          <a href="https://videojs.com/html5-video-support/" target="_blank">
-            supports HTML5 video
-          </a>
-        </p>
-      </video>
+          <p className="vjs-no-js">
+            To view this video please enable JavaScript, and consider upgrading
+            to a web browser that
+            <a href="https://videojs.com/html5-video-support/" target="_blank">
+              supports HTML5 video
+            </a>
+          </p>
+        </video>
+      </div>
     </div>
   );
 };
