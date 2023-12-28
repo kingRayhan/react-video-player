@@ -36,6 +36,7 @@ export interface VideoPlayerProps {
   };
   playbackRates?: number[];
   disablePictureInPicture?: boolean;
+  isFluid?: boolean;
 
   onReady?: (ready: ReadyCallback | undefined) => void;
 }
@@ -55,6 +56,7 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
       back: 5,
     },
   },
+  isFluid = false,
   playbackRates = [0.5, 1, 1.5, 2],
   disablePictureInPicture = false,
   onReady,
@@ -84,7 +86,9 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
       <div className="gl-video-player__wrapper">
         <video
           ref={videoRef}
-          className={`video-js vjs-theme-${theme} gl-video-player__video`}
+          className={`video-js vjs-theme-${theme} gl-video-player__video ${
+            isFluid ? "vjs-fluid" : ""
+          }}`}
           controls
           autoPlay={autoPlay}
           preload="auto"
