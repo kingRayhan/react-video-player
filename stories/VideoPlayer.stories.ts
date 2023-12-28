@@ -3,7 +3,7 @@ import { VideoPlayer } from "../src";
 import { VideoPlayerProps } from "../src/VideoPlayer";
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
-const meta = {
+const meta: Meta = {
   title: "VideoPlayer",
   component: VideoPlayer,
   parameters: {
@@ -22,8 +22,9 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 const DEFAULT_ARGS: VideoPlayerProps = {
-  height: 1080,
-  width: 1920,
+  height: 400,
+  width: 600,
+  isFluid: true,
   sources: [
     {
       src: "https://media.w3.org/2010/05/sintel/trailer_hd.mp4",
