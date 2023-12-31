@@ -1,2 +1,5 @@
 stories
 example
+.storybook
+.github
+src

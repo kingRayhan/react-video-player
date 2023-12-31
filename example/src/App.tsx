@@ -14,6 +14,8 @@ const App = () => {
     theme: "forest", // 'city', 'fantasy', 'forest', 'sea'
     autoPlay: false,
     loop: false,
+    width: 1080,
+    height: 720,
     sources: videoSources,
     controlBar: {
       skipButtons: {
@@ -28,7 +30,7 @@ const App = () => {
     },
   };
 
-  return <VideoPlayer {...videoProps} />;
+  return <VideoPlayer {...videoProps} className="name" />;
 };
 
 export default App;

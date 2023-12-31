@@ -15,29 +15,104 @@ import "@videojs/themes/dist/sea/index.css";
 import videojs, { ReadyCallback } from "video.js";
 import "./VideoPlayer.css";
 
-export interface VideoPlayerProps {
+export interface VideoPlayerProps extends React.HTMLAttributes<HTMLDivElement> {
+  /**
+   * The theme of the video player
+   * @default "city"
+   */
   theme?: "city" | "fantasy" | "forest" | "sea";
+
+  /**
+   * The height and width of the video player
+   * @default 1080
+   */
   height?: number;
+
+  /**
+   * The height and width of the video player
+   * @default 1920
+   */
   width?: number;
+
+  /**
+   * Whether the video should autoplay or not
+   * @default false
+   */
   autoPlay?: boolean;
+
+  /**
+   * Whether the video should loop or not
+   * @default false
+   */
   loop?: boolean;
+
+  /**
+   * The sources of the video
+   * @default []
+   * @example
+   * ```tsx
+   * <VideoPlayer
+   * sources={[
+   * {
+   * src: "https://vjs.zencdn.net/v/oceans.mp4",
+   * type: "video/mp4",
+   * },
+   * {
+   * src: "https://vjs.zencdn.net/v/oceans.webm",
+   * type: "video/webm",
+   * },
+   * {
+   * src: "https://vjs.zencdn.net/v/oceans.ogv",
+   * type: "video/ogg",
+   * },
+   * ]}
+   * />
+   */
   sources?: {
     src: string;
     type: string;
   }[];
+
+  /**
+   * The poster of the video
+   * @default ""
+   */
   poster?: string;
 
-  // Videojs specific props
+  // -------------- Videojs specific props
+
+  /**
+   * Whether the video should be fluid or not
+   */
   controlBar?: {
     skipButtons?: {
       forward?: number;
       backward?: number;
     };
   };
+
+  /**
+   * The playback rates of the video
+   * @default [0.5, 1, 1.5, 2]
+   */
   playbackRates?: number[];
+
+  /**
+   * Whether the video should be fluid or not
+   * @default false
+   */
   disablePictureInPicture?: boolean;
+
+  /**
+   * Whether the video should be fluid or not
+   * @default false
+   */
   isFluid?: boolean;
 
+  /**
+   * Callback when the video is ready
+   * @default undefined
+   */
   onReady?: (ready: ReadyCallback | undefined) => void;
 }
 
@@ -60,6 +135,7 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
   playbackRates = [0.5, 1, 1.5, 2],
   disablePictureInPicture = false,
   onReady,
+  ...props
 }) => {
   const videoRef = React.useRef(null);
 
@@ -83,7 +159,7 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({
 
   return (
     <div>
-      <div className="gl-video-player__wrapper">
+      <div className="gl-video-player__wrapper" {...props}>
         <video
           ref={videoRef}
           className={`video-js vjs-theme-${theme} gl-video-player__video ${
