@@ -50,23 +50,24 @@ export interface VideoPlayerProps extends React.HTMLAttributes<HTMLDivElement> {
    * The sources of the video
    * @default []
    * @example
-   * ```tsx
-   * <VideoPlayer
-   * sources={[
-   * {
-   * src: "https://vjs.zencdn.net/v/oceans.mp4",
-   * type: "video/mp4",
-   * },
-   * {
-   * src: "https://vjs.zencdn.net/v/oceans.webm",
-   * type: "video/webm",
-   * },
-   * {
-   * src: "https://vjs.zencdn.net/v/oceans.ogv",
-   * type: "video/ogg",
-   * },
-   * ]}
-   * />
+```ts
+   <VideoPlayer
+    sources={[
+        {
+            src: "https://vjs.zencdn.net/v/oceans.mp4",
+            type: "video/mp4",
+        },
+        {
+            src: "https://vjs.zencdn.net/v/oceans.webm",
+            type: "video/webm",
+        },
+        {
+            src: "https://vjs.zencdn.net/v/oceans.ogv",
+            type: "video/ogg",
+        },
+    ]}
+/>
+```
    */
   sources?: {
     src: string;
