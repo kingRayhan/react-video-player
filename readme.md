@@ -4,6 +4,8 @@ A customizable React component serving as a wrapper for the popular Video.js lib
 
 [Storybook Demo](https://kingrayhan.github.io/react-video-player)
 
+[Api Doc (tsdocs)](https://tsdocs.dev/docs/@graphland/react-video-player)
+
 ### Installation
 
 ```bash
